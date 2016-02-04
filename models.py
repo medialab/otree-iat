@@ -1,21 +1,16 @@
 # -*- coding: utf-8 -*-
 # <standard imports>
 from __future__ import division
-
-import random
-
-import otree.models
-from otree.db import models
-from otree import widgets
-from otree.common import Currency as c, currency_range, safe_json
 from otree.constants import BaseConstants
 from otree.models import BaseSubsession, BaseGroup, BasePlayer
 # </standard imports>
 
-author = 'Your name here'
+import jsonfield
+
+author = 'Davy Peter Braun <davy.braun@sciencespo.fr>'
 
 doc = """
-Your app description
+An implementation of the Implicit Association Test for oTree.
 """
 
 
@@ -23,6 +18,7 @@ class Constants(BaseConstants):
     name_in_url = 'iat'
     players_per_group = None
     num_rounds = 1
+    data = open('iat/static/iat.json', 'r').read()
 
 
 class Subsession(BaseSubsession):
@@ -34,4 +30,4 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    pass
+    iat_results = jsonfield.JSONField()
