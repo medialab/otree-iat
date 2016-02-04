@@ -1,27 +1,13 @@
 # -*- coding: utf-8 -*-
 from __future__ import division
 
-from otree.common import Currency as c, currency_range, safe_json
-
 from . import models
-from ._builtin import Page, WaitPage
-from .models import Constants
+from ._builtin import Page
 
 
-class MyPage(Page):
-    pass
-
-class ResultsWaitPage(WaitPage):
-
-    def after_all_players_arrive(self):
-        pass
-
-class Results(Page):
-    pass
+class IAT(Page):
+    form_model = models.Player
+    form_fields = ['iat_results']
 
 
-page_sequence = [
-    MyPage,
-    ResultsWaitPage,
-    Results
-]
+page_sequence = [IAT]
