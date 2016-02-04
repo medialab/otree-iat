@@ -5,6 +5,7 @@ from otree.constants import BaseConstants
 from otree.models import BaseSubsession, BaseGroup, BasePlayer
 # </standard imports>
 
+import json
 import jsonfield
 
 author = 'Davy Peter Braun <davy.braun@sciencespo.fr>'
@@ -18,7 +19,7 @@ class Constants(BaseConstants):
     name_in_url = 'iat'
     players_per_group = None
     num_rounds = 1
-    data = open('iat/static/iat.json', 'r').read()
+    data = json.load(open('iat/static/iat.json', 'r'))
 
 
 class Subsession(BaseSubsession):
