@@ -1,5 +1,6 @@
 {
   "config": {
+    "title": "IAT",
     "keycodes": {
       "left": 69,
       "right": 73
