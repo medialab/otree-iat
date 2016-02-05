@@ -2,19 +2,33 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Page title
+    {{Constants.data.config.title}}
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href={% static "css/iat.css" %} />
+{% endblock %}
+
+{% block scripts %}
+  <script src={% static "js/iat.js" %}></script>
+  <script>
+    var data = {{Constants.data|safe}};
+    IAT.begin(data)
+  </script>
 {% endblock %}
 
 {% block content %}
 
-<!--
-Documentation on how to write a django template here:
-https://docs.djangoproject.com/en/dev/topics/templates/
+    <input type="text" name="iat_results" />
 
-Bootstrap comes pre-loaded, so you can use any Bootstrap elements:
-http://getbootstrap.com/components/
-
--->
+    <main id="iat_test">
+      <div class="row">
+        <div class="category left col-md-4">LEFT</div>
+        <div class="stimuli col-md-4">stimuli</div>
+        <div class="category right col-md-4">RIGHT</div>
+      </div>
+      <div class="wrong-answer">✕</div>
+    </main>
 
     {% next_button %}
 
