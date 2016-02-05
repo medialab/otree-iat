@@ -50,25 +50,27 @@
   "extras": [
     {
       "name": "governement",
-      "categories_stimuli":
-      {
-        "category": "governement",
-        "stimuli": [
-          "Politicians", "Regulation", "Public servants", "Public administration", "State", "Judge"
-        ]
-      },
+      "categories_stimuli": [
+        {
+          "category": "governement",
+          "stimuli": [
+            "Politicians", "Regulation", "Public servants", "Public administration", "State", "Judge"
+          ]
+        }
+      ],
       "stimuli_sequence_left":[0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1],
       "stimuli_sequence_right":[0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1]
     },
     {
       "name": "judicial system",
-      "categories_stimuli":
-      {
-        "category": "judicial system",
-        "stimuli": [
-          "Judge", "Laywer", "Department of Justice", "Court", "Public prosecutor"
-        ]
-      },
+      "categories_stimuli": [
+        {
+          "category": "judicial system",
+          "stimuli": [
+            "Judge", "Laywer", "Department of Justice", "Court", "Public prosecutor"
+          ]
+        }
+      ],
       "stimuli_sequence_left":[0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1],
       "stimuli_sequence_right":[0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1]
     }
