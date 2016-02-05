@@ -14,6 +14,9 @@
   <script>
     var data = {{Constants.data|safe}};
     IAT.begin(data)
+       .then(function(queue) {
+         console.log(queue);
+       })
   </script>
 {% endblock %}
 
