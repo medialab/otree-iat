@@ -14,8 +14,10 @@
   <script>
     var data = {{Constants.data|safe}};
     IAT.begin(data)
-       .then(function(queue) {
-         console.log(queue);
+       .then(function(results) {
+         console.log(results);
+         $('input[name="iat_results"]').val(JSON.stringify(results));
+         $('#form').submit();
        })
   </script>
 {% endblock %}
@@ -32,7 +34,5 @@
       </div>
       <div class="wrong-answer">✕</div>
     </main>
-
-    {% next_button %}
 
 {% endblock %}
