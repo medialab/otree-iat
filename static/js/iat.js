@@ -298,6 +298,7 @@ $(function(window, undefined) {
        */
       function reset() {
         console.log('showing', trial);
+        displayWrongAnswerFeedback(false);
         dispose();
 
         timeLimitForAnswer = setTimeout(timeLimitHandler, answerTimeLimit * 1000);
@@ -337,6 +338,7 @@ $(function(window, undefined) {
             return deferred.resolve();
           }
 
+          displayWrongAnswerFeedback(true);
           setError(trial, timer.getElapsed());
         }
       }
