@@ -1,12 +1,9 @@
 {% extends "global/Base.html" %}
 {% load staticfiles otree_tags %}
+{% load static %}
 
 {% block title %}
-    {{Constants.data.config.title}}
-{% endblock %}
-
-{% block style %}
-    <link rel="stylesheet" href={% static "css/iat.css" %} />
+    {{Constants.test_title}}
 {% endblock %}
 
 {% block scripts %}
@@ -24,7 +21,29 @@
 
 {% block content %}
 
-    <input type="text" name="iat_results" />
+    <style>
+      #iat_test {
+        text-align: center;
+        font-size: 30px;
+      }
+
+      .wrong-answer {
+        display: block;
+        opacity: 1;
+        position: absolute;
+        width: 300px;
+        left: 50%;
+        margin-left: -150px;
+        margin-top: -245px;
+        font-size: 300px;
+        font-weight: 700;
+        color: red;
+        opacity: 0;
+      }
+
+    </style>
+
+    <input type="hidden" name="iat_results" />
 
     <main id="iat_test">
       <div class="row">
